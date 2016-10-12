@@ -1,3 +1,21 @@
 h3 > small {
   font-size: 0.4em;
 }
+
+input[type=number] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
+
+input[type=button] {
+  margin-top: -5px;
+}

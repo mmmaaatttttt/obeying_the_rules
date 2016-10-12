@@ -2,13 +2,29 @@ h3 > small {
   font-size: 0.4em;
 }
 
-input[type=number] {
+input[type=number],
+#guess-text {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: none;
   text-align: center;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+#guess-text {
+  width: 300px;
+  text-align: left;
+  padding: 3px 10px;
+}
+
+#explanation-area {
+  margin-top: 20px;
+  display: none;
+}
+
+#results-area {
+  display: none;
 }
 
 input:active,
@@ -18,4 +34,38 @@ input:focus {
 
 input[type=button] {
   margin-top: -5px;
+}
+
+.new-guess input {
+  margin: 2px;
+}
+
+.new-guess span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.success {
+  color: #419641;
+}
+
+.danger {
+  color: #e51c23;
+}
+
+.navbar-brand {
+  float: none;
+  display: inline-block;
+  padding: 20.5px;
+}
+
+#next {
+  display: block;
+  width: 33%;
+  margin: 25px auto;
+}
+
+#pattern {
+  font-size: 1.5em;
+  text-align: center;
 }

@@ -10,34 +10,37 @@
 </head>
 <body>
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">The New York Times Challenge</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <!-- <li><a href="#">Link</a></li> -->
-        </ul>
-      </div>
+    <div class="container-fluid text-center">
+      <a class="navbar-brand" href="#">The New York Times Challenge</a>
     </div>
   </nav>
   <article class="container">
-    <h3>Here's how it works: <small><a href="http://www.nytimes.com/interactive/2015/07/03/upshot/a-quick-puzzle-to-test-your-problem-solving.html">Source: New York Times</a></small></h3>
-    <p>We’ve chosen a rule that some sequences of three numbers obey — and some do not. Your job is to guess what the rule is.</p>
-    <p>We’ll start by telling you that the sequence 2, 4, 8 obeys the rule.</p>
-    <p>Now it’s your turn. Enter a number sequence in the boxes below, and we’ll tell you whether it satisfies the rule or not. You can test as many sequences as you want.</p>
-    <div id="guess-area">
-      <h5>Enter your guess:</h4>
-      <input type="number">
-      <input type="number">
-      <input type="number">
-      <input type="button" value="Guess!" class="btn btn-success" disabled>
+    <div id="part1">
+      <h3>Here's how it works: <small><a href="http://www.nytimes.com/interactive/2015/07/03/upshot/a-quick-puzzle-to-test-your-problem-solving.html">Source: New York Times</a></small></h3>
+      <p>We’ve chosen a rule that some sequences of three numbers obey — and some do not. Your job is to guess what the rule is.</p>
+      <p>We’ll start by telling you that the sequence 2, 4, 8 obeys the rule.</p>
+      <p>Now it’s your turn. Enter a number sequence in the boxes below, and we’ll tell you whether it satisfies the rule or not. You can test as many sequences as you want.</p>
+      <div id="guess-area">
+        <h5>Enter your guess:</h4>
+        <input type="number">
+        <input type="number">
+        <input type="number">
+        <input type="button" value="Guess!" class="btn btn-success" disabled>
+      </div>
+      <div id="explanation-area">
+        <p>When you think you know the rule, type it below and click submit. <b>Make sure you're right; you won't get a second chance on this one.</b></p>
+        <input type="text" id="guess-text"></input>
+        <input type="button" class="btn btn-primary" value="I think I know it" id="see-results">
+      </div>
+    </div>
+    <div id="results-area">
+      <h4>Results</h4>
+      <p>The pattern 1 rule was:</p>
+      <p id="pattern">Each number must be larger than the preceding number.</p>
+      <p>Did you get it right?</p>
+      <p>Try another pattern to see how you do:</p>
+      <a href="./2.html" class="btn btn-primary" id="next">Next</a>
+      <a href="./takeaways.html">I'm finished. Show me the takeaways.</a>
     </div>
   </article>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

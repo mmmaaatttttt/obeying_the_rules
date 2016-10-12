@@ -3,9 +3,12 @@ $(function() {
   var $numInputs = $("input[type=number]");
   var $guess = $("input[type=button]");
   var $guessArea = $("#guess-area");
+  var $explanationArea = $("#explanation-area");
+  var $resultsArea = $("#results-area");
+  var $seeResults = $("#see-results");
+  var $part1 = $("#part1");
 
   $numInputs.on('keyup blur change', function() {
-    console.log(getVals(), enableButton());
     enableButton() ? $guess.removeAttr('disabled') : $guess.attr('disabled') 
   });
 
@@ -13,7 +16,8 @@ $(function() {
     var values = getVals();
     var passTest = greaterTest(values);
     var className = passTest ? 'success' : 'danger';
-    var postText = passTest ?  'Yep, this obeys the rule!' : 'Nope';
+    var postText = passTest ?  'Yes! This obeys the rule!' : 'Nope.';
+    var $newGuess = $("<div class='new-guess'></div>");
     var elements = values.map(function(val) {
       return $('<input>', {
         value: val,
@@ -21,11 +25,23 @@ $(function() {
         "class": "btn btn-" + className
       });
     });
-    elements.push($("<span>" + postText + "</span>"));
-    elements.forEach(function(el) {
-      $guessArea.prepend(el);
+    elements.push($("<span></span>", {
+      text: postText,
+      "class": className
+    }));
+    elements.forEach(function($el) {
+      $newGuess.append($el);
     });
+    $newGuess.insertBefore($guessArea.children('h5'));
     $numInputs.val('');
+    $explanationArea.slideDown(200);
+  });
+
+  $seeResults.on('click', function() {
+    $part1.slideUp(500, function() {
+      $part1.remove();
+      $resultsArea.slideDown(500);
+    });
   });
 
   function getVals() {

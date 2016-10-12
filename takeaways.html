@@ -15,33 +15,26 @@
     </div>
   </nav>
   <article class="container">
-    <div id="part1">
-      <h3>Here's how it works: <small><a href="http://www.nytimes.com/interactive/2015/07/03/upshot/a-quick-puzzle-to-test-your-problem-solving.html">Source: New York Times</a></small></h3>
-      <p>We’ve chosen a rule that some sequences of three numbers obey — and some do not. Your job is to guess what the rule is.</p>
-      <p>We’ll start by telling you that the sequence 2, 4, 8 obeys the rule.</p>
-      <p>Now it’s your turn. Enter a number sequence in the boxes below, and we’ll tell you whether it satisfies the rule or not. You can test as many sequences as you want.</p>
-      <div id="guess-area">
-        <h5>Enter your guess:</h4>
-        <input type="number">
-        <input type="number">
-        <input type="number">
-        <input type="button" value="Guess!" class="btn btn-success" disabled id="guess">
-      </div>
-      <div id="explanation-area">
-        <p>When you think you know the rule, type it below and click submit. <b>Make sure you're right; you won't get a second chance on this one.</b></p>
-        <input type="text" id="guess-text"></input>
-        <input type="button" class="btn btn-primary" value="I think I know it" id="see-results">
-      </div>
+    <h4>Takeaways:</h4>  
+    <p>From <a href="http://www.nytimes.com/interactive/2015/07/03/upshot/a-quick-puzzle-to-test-your-problem-solving.html" target="_blank">The New York Times</a>:</p>
+    <div class="well">
+      <p>
+        ... most people start off with the incorrect assumption that if we're asking them to solve a problem, it must be a somewhat tricky problem. They come up with a theory for what the answer is, like: <em>Each number is double the previous number</em>. And then they make a classic psychological mistake.
+      </p>
+      <p>
+        They don’t want to hear the answer "no." In fact, it may not occur to them to ask a question that may yield a no.
+      </p>
+      <p>
+        Remarkably, 77 percent of people who have played this game so far have guessed the answer without first hearing a single no. A mere 9 percent heard at least three nos — even though there is no penalty or cost for being told no, save the small disappointment that every human being feels when hearing "no."
+      </p>
+      <p>
+        It’s a lot more pleasant to hear "yes." That, in a nutshell, is why so many people struggle with this problem.
+      </p>
+      <p>
+        ...Often, people never even think about asking questions that would produce a negative answer when trying to solve a problem — like this one. They instead restrict the universe of possible questions to those that might potentially yield a "yes."
+      </p>
     </div>
-    <div id="results-area">
-      <h4>Results</h4>
-      <p>The pattern 1 rule was:</p>
-      <p id="pattern">Each number must be larger than the preceding number.</p>
-      <p>Did you get it right?</p>
-      <p>Try another pattern to see how you do:</p>
-      <a href="./2.html" class="btn btn-primary" id="next">Next</a>
-      <a href="./takeaways.html">I'm finished. Show me the takeaways.</a>
-    </div>
+    <p>In other words, failure is sometime a <em>necessary</em> step to get to a good end result! If you haven't explored the boundaries of what doesn’t work, you may not be seeing the whole picture.</p>
   </article>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -14,7 +14,7 @@ $(function() {
 
   $guess.on('click', function() {
     var values = getVals();
-    var passTest = greaterTest(values);
+    var passTest = patternTest(values);
     var className = passTest ? 'success' : 'danger';
     var postText = passTest ?  'Yes! This obeys the rule!' : 'Nope.';
     var $newGuess = $("<div class='new-guess'></div>");
@@ -54,10 +54,6 @@ $(function() {
     return getVals().every(function(val) {
       return val.length > 0;
     });
-  }
-
-  function greaterTest(arr) {
-    return +arr[2] > +arr[1] && +arr[1] > +arr[0];
   }
 
 });

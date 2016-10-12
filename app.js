@@ -1,7 +1,7 @@
 $(function() {
 
   var $numInputs = $("input[type=number]");
-  var $guess = $("input[type=button]");
+  var $guess = $("#guess");
   var $guessArea = $("#guess-area");
   var $explanationArea = $("#explanation-area");
   var $resultsArea = $("#results-area");

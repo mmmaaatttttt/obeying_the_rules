@@ -1,6 +1,6 @@
 $(function() {
 
-  var $numInputs = $("input[type=number]");
+  var $numInputs = $("input[type=number]").length ? $("input[type=number]") : $("input[maxlength=1]");
   var $guess = $("#guess");
   var $guessArea = $("#guess-area");
   var $explanationArea = $("#explanation-area");
